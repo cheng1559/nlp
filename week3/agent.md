@@ -1,11 +1,13 @@
 # 你的任务
 
-1. 复现fastext的代码，并利用fastext生成词向量，提交可运行代码和把结果放在word里一起打包上传。 
-2. 选择RNN、GRU、LSTM构建seq2seq的模型，实现天津话到普通话的翻译，提交可运行代码和把结果放在word里一起打包上传。
-3. 利用character-level的表示创建pos和ner模型，
+1. 复现fastText的代码，并利用fastText生成词向量
+2. 选择RNN、GRU、LSTM构建seq2seq的模型，实现天津话到普通话的翻译
+3. 利用character-level的表示创建pos和ner模型
 
 # 任务详情
-1. 数据集使用 ./data/icwb2-data 进行训练和测试；
+1. 天津话数据集已存放于 ./data/Tianjin_dataset 目录；
+2. fastText代码可参考 ./data/fastText 目录；
+3. 任务3的数据集使用 ./data/result-rmrb.txt
 
 # 注意事项
 1. 代码中不要出现中文注释，在保证功能的前提下简洁易懂，减少防御性编程
@@ -25,5 +27,5 @@ project
 ├── data       // 存放数据集
 ├── output     // 存放模型权重等输出文件
 ├── src        // 存放代码
-└── report.md  // 实验报告
+└── README.md  // 实验报告
 ```

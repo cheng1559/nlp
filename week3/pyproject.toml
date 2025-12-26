@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sequence-modeling"
+version = "0.1.0"
+description = "FastText-like embeddings, seq2seq translation, and char-level tagging"
+readme = "report.md"
+authors = [{ name = "Hu Chengcheng" }]
+requires-python = ">=3.12"
+dependencies = [
+  "torch>=2.1.0",
+  "lightning>=2.2.0",
+  "tqdm>=4.66.0",
+  "numpy>=1.26.0",
+  "regex>=2023.10.0",
+]
+
+[project.scripts]
+train-fasttext = "seq_lab.fasttext:main"
+train-seq2seq = "seq_lab.seq2seq:main"
+train-tagger = "seq_lab.tagging:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["seq_lab*"]

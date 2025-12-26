@@ -28,5 +28,4 @@ Thumbs.db
 .vscode/
 .idea/
 
-icwb2-data/
-zhwiki-latest-pages-articles.xml.bz2
+data/
