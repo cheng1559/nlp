@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chinese-word-segmentation"
+version = "0.1.0"
+description = "Chinese word segmentation with max-match and BiLSTM"
+readme = "README.md"
+authors = [{ name = "Hu Chengcheng" }]
+requires-python = ">=3.12"
+dependencies = [
+  "torch>=2.1.0",
+  "lightning>=2.2.0",
+  "tqdm>=4.66.0",
+  "numpy>=1.26.0",
+]
+
+[project.scripts]
+cws-train = "cws_lab.train:main"
+cws-mmseg = "cws_lab.mmseg:main"
+cws-eval = "cws_lab.eval:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
